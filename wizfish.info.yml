@@ -1,0 +1,5 @@
+name: wizfish
+type: module
+description: Template Drupal 8 module.
+core: 8.x
+package: WizardFish Technologies

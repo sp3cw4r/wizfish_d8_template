@@ -1,0 +1,14 @@
+{
+  "name": "drupal/wizfish",
+  "type": "drupal-module",
+  "description": "Template Drupal 8 module.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/wizfish",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/wizfish",
+    "source": "http://cgit.drupalcode.org/wizfish"
+  },
+  "require": { }
+}

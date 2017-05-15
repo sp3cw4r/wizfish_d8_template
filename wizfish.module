@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains wizfish.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function wizfish_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the wizfish module.
+    case 'help.page.wizfish':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Template Drupal 8 module.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function wizfish_theme() {
+  return [
+    'wizfish' => [
+      'render element' => 'children',
+    ],
+  ];
+}
