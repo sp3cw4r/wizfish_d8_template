@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains wizfish.module.
+ * Contains wizfish_d8_template.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -10,10 +10,10 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function wizfish_help($route_name, RouteMatchInterface $route_match) {
+function wizfish_d8_template_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the wizfish module.
-    case 'help.page.wizfish':
+    // Main module help for the wizfish_d8_template module.
+    case 'help.page.wizfish_d8_template':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Template Drupal 8 module.') . '</p>';
@@ -28,7 +28,7 @@ function wizfish_help($route_name, RouteMatchInterface $route_match) {
  */
 function wizfish_theme() {
   return [
-    'wizfish' => [
+    'wizfish_d8_template' => [
       'render element' => 'children',
     ],
   ];
