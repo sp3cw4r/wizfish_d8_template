@@ -8,6 +8,36 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
+ * Implements hook_entity_view().
+ */
+
+function wizfish_d8_template_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $$
+  // This hook will be called everytime any entity is viewed.
+  drupal_set_message(t('All is as it should be! Carry on partner.'), 'status');
+
+  if($entity->getEntityType()->id() === 'node') {
+    $build['awesome'] = [
+      '#markup' => '<marquee>This is awesome.</marquee>',
+      '#allowed_tags' => ['marquee'],
+    ];
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+
+//function wizfish_d8_template_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $$
+  // This hook will be called everytime any entity is viewed.
+//  drupal_set_message(t('All is as it should be! Carry on partner.'), 'status');
+//
+//  $build['terrific'] = [
+//    '#markup' => '<marquee>This is terrific.</marquee>',
+//    '#allowed_tags' => ['marquee'],
+//  ];
+//}
+
+/**
  * Implements hook_help().
  */
 function wizfish_d8_template_help($route_name, RouteMatchInterface $route_match) {
